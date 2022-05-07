@@ -1,0 +1,48 @@
+Cucumber Review Notes
+
+Keywords:
+Given-precondition
+When-action
+Then-expected results
+And-continuation step
+But-
+
+Background-Common Steps for precondition that we use in that particular feature file
+
+Feature
+Scenario
+Scenario Outline with examples
+
+Data Driven Testing
+
+Step Definition:
+Implementation of code using Java and adding verification/assertion using JUnit
+
+Hooks: use hooks to provide pre-condition and post-condition to all scenarios we always
+create hooks class in steps package
+@Before-provides pre-condition to all scenarios in project
+@After-provides post-condition to all scenarios in project
+
+Runner Class:
+Cucumber Options(Using JUnit to run cucumber scenarios
+    Feature
+    Glue
+    Tags
+    dryRun
+    Monochrome
+
+Maven:allows us to add dependencies and is first step in creating cucumber project
+
+pom.xml-Project Object Model
+Cucumber(java, junit, selenium, apache poi, etc)
+
+Maven has 3 repositories:
+    central-
+    remote
+    local
+
+
+
+
+
+

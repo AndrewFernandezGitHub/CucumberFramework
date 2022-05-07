@@ -1,0 +1,163 @@
+Class 1
+
+Gherkin Language:
+
+Scenario
+Given-precondition
+When-actions we need to perform
+And-supporting tag
+Then-expected results
+
+Class 2
+
+Recap:
+
+What is framework?
+
+--it is an organized structure of folders and packages which allows us to write clean
+and maintainable code
+
+build management tool
+--maven
+
+pom.xml is the main configuration file in maven project
+
+main--it is used to write the code for development
+test--it is used to write the code to test the application
+    --java for tech/.coding we use java directory
+    --resources - for non tech/non code we use resources
+
+cucumber - it supports BDD
+    --we use gherkin language (plain english text) to write the scenarios
+    --it supports junit
+
+Scenario--it is a test case
+Given--pre-condition
+When--actions
+And--supporting tag
+Then--results
+
+User Story 12345 - Employee Search
+
+Scenario - Search employee by ID
+
+Given user is navigated to HRMS Application
+When user enters valid admin credentials
+And user clicks on login button
+And user navigates to employee list page
+When user enters valid employee id
+and clicks on search button
+Then user is able to see employee information
+
+Scenario - Search employee by name
+
+Given user is navigated to HRMS Application
+When user enters valid admin credentials
+And user clicks on login button
+And user navigates to employee list page
+When user enters valid name
+And clicks on search button
+then user is able to see employee information
+
+file where we write BDD scenarios is feature file
+this file has a .feature extension
+
+Class 3
+
+Recap:
+
+We use feature file to write our scenarios
+--search employee ID
+--search employee by name
+
+In feature file we write scenarios using gherkin language
+--Given,when,and,then, scenario,feature
+
+After Feature file we need to create step definitions
+
+Class 4
+
+Recap:
+
+Common Methods class in our framework is used to write all the methods we will be using
+in majority of scenarios.(code reusability)
+
+sendText method, click,
+
+In constant class we provide implicit wait, explicit wait values, test data config
+
+Page Object Model is design pattern for framework
+According to page object model, we create page classes for all the screens available
+in the application.
+
+Where do you implement object repository? According to Page Object Model Design pattern
+we create the locators to
+
+Class 5:
+
+Recap:
+Creating multiple steps classes fore multiple feature files.
+
+Page Object Model Design Pattern
+
+In common methods we are calling page initializers method, this method is going to call
+the objects of page classes which will call the constructor and these constructors will
+will initialize all the web elements
+
+Runner Class is Java based so we open it as a new package.
+
+Cucumber always need JUNIT to be added for runner class.
+
+In between two key words and values don't forget comma ,
+
+Use Tags @smoke, @sprint#,@test, @regression to identify test cases correctly for different testing methods
+
+Something found in Dev environment it is issue, something found in test environment is bug
+
+Class 6
+
+Recap:
+
+Runner class- We use this class to execute test cases in cucumber
+
+Cucumber Options:
+--features - path of feature file
+--glue - to provide the path of steps definitions
+--dryRun - it provides step definition to add in steps classes
+--monochrome - if it is set top true, it cleans the console
+--tags - we use tags to execute scenarios in groups
+    --Here we use OR and AND to execute scenarios from 2 or more different tags together
+
+Background:we take common steps from scenarios and put them in background
+
+Hooks: we use hooks to provide pre-condition and post condition to all the scenarios.
+     - We always create hooks class under steps package.
+
+Backgrounds VS Hooks:
+background - it is applicable to one feature file
+hooks - it is applicable to al the feature files
+
+Our Cucumber framework is hybrid framework to combine Behavior Driven Data and Driven Data Testing (BDD and DDT)
+
+Cucumber Class 7
+
+Recap:
+
+Hooks-to write pre-condition and pos-condition of the project, we use hooks.
+@before and @after-2 types of hooks we have in cucumber
+We always write hooks under steps package
+
+Data Driven testing part:one script works for many data sets
+
+-using examples table and scenario outline
+-using data table
+-Excel
+
+
+In Junit there are two types of Assertions.
+1-Comparison(compares the entities from feature file and application, when
+expectedtabs and actualtabs are equal its true, if not its error)
+2-Existence(if it exists, returns true.If it does not exist, returns false)
+
+
+
