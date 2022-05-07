@@ -159,5 +159,39 @@ In Junit there are two types of Assertions.
 expectedtabs and actualtabs are equal its true, if not its error)
 2-Existence(if it exists, returns true.If it does not exist, returns false)
 
+Build Management Tool allows you run the whole project as a whole, not as runner class, etc
+
+Class 8-9
+
+maven surefile plugin used for Build Mangement Tool
+
+https://maven.apache.org/surefire/maven-surefire-plugin/
+
+UsingTestNg-->Using Suite XML files
+
+paste the plugin code outside of the last dependencies in Pom.xml file
+modify plugin by removing the ...., adding <Build> </Build> at top and bottom, and change
+
+** -->project directory
+/* --> name of class under project directory
+
+
+
+if no build success, code cannot be pushed to repository
+
+to clean the project -->use mvn clean from cmd/terminal
+to run the project -->use mvn test from cmd/terminal
+override the tags from cmd --> use mvn clean verify -Dcucumber.filter.tags="@latest"
+                                                     (can manually override tag in runner class with new tag, in this case it was @latest
+
+mvn clean - it cleans your target folder
+
+mvn test - to execute our test cases
+
+verify - verifies your code
+
+package - convert your code to packages
+
+
 
 

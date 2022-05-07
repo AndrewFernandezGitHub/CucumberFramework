@@ -30,7 +30,7 @@ Feature:Adding the employees in HRMS Application
     And user clicks on save button
     Then employee added succesfully
 
-  @123
+  @123 @test
   Scenario Outline: Adding multiple employees
     #When user enters valid admin credential
     #And user clicks on login button
@@ -56,7 +56,7 @@ Feature:Adding the employees in HRMS Application
       | tarik     | MS         | Mujeeb   |
       | nassir    | MS         | flowers  |
 
-      @excel
+      @test @excel
       Scenario:Adding multiple employees from excel file
         When user adds multiple employees from excel file using "EmployeeData" sheet and verify the user added
 

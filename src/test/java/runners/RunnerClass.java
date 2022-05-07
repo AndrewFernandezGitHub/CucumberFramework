@@ -23,8 +23,13 @@ import org.junit.runner.RunWith;
         //use or if we need to execute scenarios from logical or keyword which will execute either of the
         //scenario having the tag
         //use and if we need to execute scenarios from logical and keyword which will execute the scenarios
-        //having both the in it
-        tags = "@excel"
+        //having both tags in it
+        tags = "@excel",
+        //html report will be generated under target folder,
+        // pretty keyword shows steps and doesnt save report
+        plugin = {"html:target/cucumber.html","pretty","json:target/cucumber.json","rerun:target/failed.txt"
+
+}
 
 )
 

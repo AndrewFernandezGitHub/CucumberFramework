@@ -10,7 +10,7 @@ Feature: Validation of Login Scenarios
     And user clicks on login button
     Then admin user is successfully logged in
 
-    @smoke @regression
+    @smoke @regression @sprint12
   Scenario: ESS (Non Admin) Login
    # Given user is navigated to HRMS application
     When user enters valid ess username and password
