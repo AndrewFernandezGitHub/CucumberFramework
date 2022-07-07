@@ -15,6 +15,13 @@ public class LoginPage extends CommonMethods {
 
     @FindBy(id="btnLogin")
     public WebElement loginBtn;
+
+
+    @FindBy(xpath="//*[@id=\"divLogo\"]/img")
+    public  WebElement logo;
+
+    @FindBy(id="spanMessage")
+    public WebElement errorMessage;
 //constructor
     public LoginPage(){
         PageFactory.initElements(driver,this);

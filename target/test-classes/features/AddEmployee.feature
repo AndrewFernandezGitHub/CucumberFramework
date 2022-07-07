@@ -30,7 +30,7 @@ Feature:Adding the employees in HRMS Application
     And user clicks on save button
     Then employee added succesfully
 
-  @123 @test
+  @123
   Scenario Outline: Adding multiple employees
     #When user enters valid admin credential
     #And user clicks on login button
@@ -47,17 +47,24 @@ Feature:Adding the employees in HRMS Application
       | tarik     | MS         | Mujeeb   |
       | nassir    | MS         | flowers  |
 
-    @test @datatable
+  @test @datatable
   Scenario: Add employee using data table
-      When user provides multiple employee data and verify they are added
-      |firstName|middleName|lastName|
+    When user provides multiple employee data and verify they are added
+      | firstName | middleName | lastName |
       | asel      | MS         | tolga    |
       | yazgil    | MS         | Kishan   |
       | tarik     | MS         | Mujeeb   |
       | nassir    | MS         | flowers  |
 
-      @test @excel
-      Scenario:Adding multiple employees from excel file
-        When user adds multiple employees from excel file using "EmployeeData" sheet and verify the user added
+  @test @excel
+  Scenario:Adding multiple employees from excel file
+    When user adds multiple employees from excel file using "EmployeeData" sheet and verify the user added
 
+  @sql
+  Scenario: Adding one employee using cucumber feature file
+    And user enters "Andrew1" "Bob1" and "fernandez1"
+    And user grabs employee id
+    And user clicks on save button
+    And user query the database for same employee id
+    Then user verifies the result
 
